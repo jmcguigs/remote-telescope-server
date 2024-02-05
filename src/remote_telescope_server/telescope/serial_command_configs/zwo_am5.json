@@ -1,0 +1,30 @@
+{
+    "PARAMETERS":
+    {
+        "NAME": "ZWO AM5",
+        "BAUD_RATE": 9600,
+        "COMMAND_SIZE": 128,
+        "RESPONSE_SIZE": 128
+    },
+    "GET_COMMANDS":
+    {
+        "GET_LATITUDE": ":Gt#",
+        "GET_LONGITUDE": ":Gg#"
+    },
+    "SET_COMMANDS":
+    {
+        "STOP_ALL": ":Q#",
+        "SYNC_RADEC": "CM#",
+        "SET_SLEW_RATE": ":R%01d#",
+        "FIND_HOME": ":hC#"
+    },
+    "DEFAULT_UNITS":
+    {
+        "LATITUDE": "DEG",
+        "LONGITUDE": "DEG",
+        "RIGHT_ASCENSION": "DHS",
+        "DECLINATION": "DEG",
+        "AZIMUTH": "DEG",
+        "ALTITUDE": "DEG"
+    }
+}

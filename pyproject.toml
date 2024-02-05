@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remote_telescope_server"
+version = "2024.2.4"
+description = "A REST server for remote observatories"
+readme = "README.md"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pyserial"
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+start-rts-server = "remote_telescope_server.rest_interface.server_manager:start_server"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+remote_telescope_server = ["remote_telescope_server/telescope/serial_command_configs/*.json"]
